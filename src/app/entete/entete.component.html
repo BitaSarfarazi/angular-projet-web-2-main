@@ -1,0 +1,11 @@
+<mat-toolbar class="header__nav" color="warn">
+    <div class="logo">
+      <button class="header__logo" routerLink="/" mat-fab aria-label="Example icon button with a delete icon">
+        Vino
+      </button>
+      <span><h1 class="header__title">&nbsp;{{sTitre}}</h1></span>
+    </div>
+    <a class="profil" [routerLink]="['/profil']" >
+      Profil
+    </a>
+</mat-toolbar>

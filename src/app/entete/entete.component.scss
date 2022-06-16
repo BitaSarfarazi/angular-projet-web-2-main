@@ -1,0 +1,48 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    margin-left: 1vw;
+}
+
+mat-toolbar{
+    top: 0;
+    padding: 0 4vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.header__nav{
+    background-color: rgb(126, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.profil{
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+.header__logo{
+    background-color: rgb(170, 159, 60);
+    color: rgb(79, 2, 2);
+    font-weight:bolder;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header__title{
+    color: rgb(233, 236, 205);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

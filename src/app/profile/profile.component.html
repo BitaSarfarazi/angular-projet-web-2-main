@@ -1,0 +1,58 @@
+<section class="container">
+  <h1 mat-dialog-title>Informations personnelles</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="usagerForm" action="">
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="nom" placeholder="Saisir le nom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Courriel(*)</mat-label>
+        <input type="email" matInput formControlName="courriel" placeholder="Saisir le courriel">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input type="phone" matInput formControlName="phone" placeholder="Saisir le numéro de téléphone">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Adresse</mat-label>
+        <textarea matInput formControlName="adresse" placeholder="Saisir l'adresse"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ville</mat-label>
+        <mat-select  formControlName="id_ville"  required placeholder="Sélectionner la ville">
+          <mat-option *ngFor="let ville of villes" [value]="ville.id">
+            {{ ville.nom }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </div>
+  <!--Boutons-->
+  <div class="submit-bloc">
+    <button mat-raised-button color="success" [disabled]="!usagerForm.dirty || !usagerForm.valid" (click)="submit()">
+      Enregistrer les modifications
+    </button>
+  </div>
+
+  <h1 mat-dialog-title>Changer le mot de passe</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="passwordFormGroup" action="">
+      <mat-form-field>
+        <mat-label>Nouveau mot de passe :</mat-label>
+        <input type="password" matInput formControlName="nom" placeholder="Saisir le nom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirmer le mot de passe :</mat-label>
+        <input  type="password"  matInput formControlName="courriel" placeholder="Saisir le courriel">
+      </mat-form-field>
+    </form>
+  </div>
+  <!--Boutons-->
+  <div class="submit-bloc">
+    <button mat-raised-button color="success" [disabled]="!usagerForm.dirty || !usagerForm.valid" (click)="submit()">
+      Enregistrer le mot de passe
+    </button>
+  </div>
+
+</section>
